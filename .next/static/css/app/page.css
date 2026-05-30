@@ -1,0 +1,230 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./components/VideoIntro/CinematicLayer.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+.CinematicLayer_layer__kzMPU {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: .85;
+  filter: blur(.1px);
+}
+.CinematicLayer_layer__kzMPU canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./components/VideoIntro/VideoIntro.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.VideoIntro_hero__cSMSF {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #020205;
+  display: flex;
+  align-items: center;
+}
+.VideoIntro_ambientVideo__oe8Nq {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  filter: blur(36px) brightness(.36) saturate(1.25);
+  opacity: .72;
+  transform: scale(1.08);
+}
+.VideoIntro_shade__pGY8_ {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 42%, rgba(255, 153, 73, .22), transparent 36%),
+    radial-gradient(circle at 82% 22%, rgba(109, 190, 255, .12), transparent 25%),
+    linear-gradient(90deg, rgba(2,2,5,.94) 0%, rgba(2,2,5,.72) 35%, rgba(2,2,5,.32) 68%, rgba(2,2,5,.78) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.72), transparent 34%, rgba(0,0,0,.86));
+}
+.VideoIntro_contentGrid__tcAHL {
+  position: relative;
+  z-index: 3;
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(320px, .72fr);
+  grid-gap: clamp(2rem, 6vw, 5rem);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding: 5rem 0 4rem;
+}
+.VideoIntro_copyBlock__uXFTf { max-width: 720px; }
+.VideoIntro_eyebrow__ChS_r {
+  margin: 0 0 1.4rem;
+  color: #ffad66;
+  text-transform: uppercase;
+  letter-spacing: .34em;
+  font-size: clamp(.68rem, .8vw, .82rem);
+  font-weight: 900;
+}
+.VideoIntro_title__dkB19 {
+  margin: 0;
+  color: #fff3e4;
+  font-size: clamp(4rem, 8.2vw, 8.8rem);
+  line-height: .82;
+  letter-spacing: -.085em;
+  text-transform: uppercase;
+  font-weight: 950;
+  text-wrap: balance;
+}
+.VideoIntro_title__dkB19 span { display: block; }
+.VideoIntro_title__dkB19 span:last-child {
+  background: linear-gradient(92deg, #fff8ee 0%, #ffd0a0 55%, #ff9b4f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.VideoIntro_subtitle__rhszp {
+  max-width: 650px;
+  margin: 1.5rem 0 0;
+  color: rgba(255, 246, 234, .76);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.75;
+}
+.VideoIntro_chips__gSmsM, .VideoIntro_logoRail__fIJz8 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-top: 1.6rem;
+}
+.VideoIntro_chips__gSmsM span, .VideoIntro_logoPill__6D1J_ {
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.07);
+  color: rgba(255,246,234,.8);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 999px;
+  padding: .56rem .82rem;
+  font-size: .78rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12);
+}
+.VideoIntro_logoRail__fIJz8 { margin-top: 1rem; }
+.VideoIntro_logoPill__6D1J_ {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .48rem .7rem .48rem .48rem;
+}
+.VideoIntro_logoPill__6D1J_ b {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #130904;
+  background: linear-gradient(135deg, #fff6e7, #ffad66);
+  font-size: .62rem;
+  letter-spacing: -.02em;
+}
+.VideoIntro_videoCard__AGrFk {
+  position: relative;
+  min-height: clamp(440px, 66vh, 720px);
+  border-radius: 38px;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 36px 120px rgba(0,0,0,.62), 0 0 90px rgba(255, 143, 77, .12);
+}
+.VideoIntro_mainVideo__SMnEb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.02) saturate(1.05) brightness(.9);
+}
+.VideoIntro_videoGlow__QMrz2 {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.22)),
+    radial-gradient(circle at 18% 38%, rgba(255, 173, 102, .18), transparent 32%);
+  pointer-events: none;
+}
+.VideoIntro_soundHint__3AIy4 {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 5rem;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.08);
+  color: rgba(255,246,234,.9);
+  border-radius: 999px;
+  padding: .78rem 1rem;
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+  animation: VideoIntro_floatBadge__glJCt 1.8s ease-in-out infinite;
+  cursor: pointer;
+}
+.VideoIntro_scrollIndicator__7Ll_U {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 1.35rem;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 58px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.075);
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+  cursor: pointer;
+}
+.VideoIntro_scrollIndicator__7Ll_U span {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  width: 2px;
+  height: 16px;
+  transform: translateX(-50%);
+  background: #ffad66;
+  border-radius: 999px;
+  animation: VideoIntro_pulseLine__GEJNf 1.6s ease-in-out infinite;
+}
+.VideoIntro_controls__YtUA6 {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 6;
+  display: flex;
+  gap: .65rem;
+}
+.VideoIntro_controls__YtUA6 button {
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+  color: rgba(255,246,234,.88);
+  border-radius: 999px;
+  padding: .72rem .95rem;
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+  cursor: pointer;
+  transition: transform .25s ease, background .25s ease;
+}
+.VideoIntro_controls__YtUA6 button:hover { transform: translateY(-2px); background: rgba(255,255,255,.13); }
+@keyframes VideoIntro_pulseLine__GEJNf { 0%,100% { transform: translate(-50%, 0); opacity: .35; } 50% { transform: translate(-50%, 16px); opacity: 1; } }
+@keyframes VideoIntro_floatBadge__glJCt { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -7px); } }
+@media (max-width: 960px) {
+  .VideoIntro_contentGrid__tcAHL { grid-template-columns: 1fr; padding-top: 6.5rem; }
+  .VideoIntro_videoCard__AGrFk { min-height: 58vh; max-width: 620px; width: 100%; }
+  .VideoIntro_title__dkB19 { font-size: clamp(3.7rem, 16vw, 7rem); }
+}
+@media (max-width: 560px) {
+  .VideoIntro_contentGrid__tcAHL { width: min(100% - 28px, 1280px); gap: 1.5rem; }
+  .VideoIntro_eyebrow__ChS_r { letter-spacing: .2em; }
+  .VideoIntro_subtitle__rhszp { font-size: .98rem; }
+  .VideoIntro_videoCard__AGrFk { min-height: 46vh; border-radius: 28px; }
+  .VideoIntro_controls__YtUA6 { right: 1rem; bottom: 1rem; }
+  .VideoIntro_soundHint__3AIy4 { bottom: 4.6rem; }
+}
+
