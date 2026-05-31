@@ -1,0 +1,338 @@
+/* ══════════════════════════════════════════════════════════
+   HERO  —  Space Grotesk display, Inter body
+══════════════════════════════════════════════════════════ */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #020308;
+  display: flex;
+  align-items: center;
+}
+
+.ambientBg {
+  position: absolute;
+  inset: -8%;
+  width: 116%; height: 116%;
+  object-fit: cover;
+  transform: scale(1.12);
+  filter: blur(52px) brightness(0.20) saturate(1.5);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(ellipse 70% 60% at 72% 46%, rgba(245,138,60,0.24) 0%, transparent 52%),
+    radial-gradient(ellipse 48% 38% at 88% 16%, rgba(96,180,255,0.12) 0%, transparent 46%),
+    linear-gradient(100deg,
+      rgba(2,3,8,0.97) 0%,
+      rgba(2,3,8,0.84) 28%,
+      rgba(2,3,8,0.22) 64%,
+      rgba(2,3,8,0.78) 100%),
+    linear-gradient(180deg,
+      rgba(0,0,0,0.72) 0%,
+      transparent 20%,
+      transparent 76%,
+      rgba(0,0,0,0.85) 100%);
+}
+
+.overlayVignette {
+  position: absolute; inset: 0; z-index: 1;
+  background: radial-gradient(ellipse 120% 120% at 50% 50%, transparent 44%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+}
+
+/* ── Layout grid ── */
+.grid {
+  position: relative;
+  z-index: 3;
+  width: min(1360px, calc(100% - 56px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0,1.05fr) minmax(300px,0.68fr);
+  gap: clamp(2rem,5.5vw,5.5rem);
+  align-items: center;
+  padding: 5.5rem 0 4rem;
+}
+
+.copy { max-width: 700px; }
+
+/* ── Eyebrow ── */
+.eyebrow {
+  display: block;
+  margin: 0 0 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.58rem, 0.74vw, 0.74rem);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f5884a;
+}
+
+/* ══════════════════════════════════════════════════════════
+   NAME — Space Grotesk 700, large negative tracking
+   This matches the premium developer portfolio reference feel
+══════════════════════════════════════════════════════════ */
+.name {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(4.5rem, 9.5vw, 10.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstName {
+  display: block;
+  color: #f0ede8;
+}
+
+.lastName {
+  display: block;
+  background: linear-gradient(92deg, #fff0de 0%, #f5b87a 50%, #f5884a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ── Subtitle ── */
+.subtitle {
+  max-width: 580px;
+  margin: 1.7rem 0 0;
+  color: rgba(240,237,232,0.66);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.93rem,1.15vw,1.12rem);
+  line-height: 1.82;
+  font-weight: 300;
+}
+
+/* ── Chips ── */
+.chips { display: flex; flex-wrap: wrap; gap: 0.52rem; margin-top: 1.8rem; }
+.chip {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.058);
+  color: rgba(240,237,232,0.76);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color 0.25s, background 0.25s;
+}
+.chip:hover { border-color: rgba(245,136,74,0.4); background: rgba(245,136,74,0.08); }
+
+/* ── CTA ── */
+.cta { display: flex; gap: 0.72rem; margin-top: 2rem; flex-wrap: wrap; }
+
+.btnPrimary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #f5884a; color: #100803;
+  border-radius: 999px;
+  padding: 0.86rem 1.55rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), box-shadow 0.28s;
+  box-shadow: 0 0 40px rgba(245,136,74,0.35);
+}
+.btnPrimary:hover { transform: translateY(-3px); box-shadow: 0 8px 60px rgba(245,136,74,0.55); }
+
+.btnGhost {
+  display: inline-flex; align-items: center;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.055);
+  color: rgba(240,237,232,0.88);
+  border-radius: 999px;
+  padding: 0.86rem 1.55rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem; font-weight: 600; letter-spacing: -0.01em;
+  text-decoration: none;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), background 0.28s, border-color 0.28s;
+}
+.btnGhost:hover { transform: translateY(-3px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.26); }
+
+/* ── Logo strip ── */
+.logoStrip { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+.logoPill {
+  display: inline-flex; align-items: center; gap: 0.52rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.042);
+  border-radius: 999px;
+  padding: 0.42rem 0.8rem 0.42rem 0.42rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.25s, background 0.25s;
+}
+.logoPill:hover { border-color: rgba(245,136,74,0.28); background: rgba(245,136,74,0.05); }
+
+.pillMark {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: linear-gradient(138deg,#fff4e0,#f5884a);
+  color: #1a0800;
+  display: grid; place-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.55rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.pillLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem; color: rgba(240,237,232,0.68); font-weight: 400; white-space: nowrap;
+}
+
+/* ── VIDEO CARD ── */
+.videoWrap { position: relative; }
+
+.videoCard {
+  position: relative;
+  aspect-ratio: 9 / 14;
+  max-height: 76vh;
+  border-radius: 38px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 48px 130px rgba(0,0,0,0.7), 0 0 100px rgba(245,136,74,0.11),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+}
+
+.mainVideo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: contrast(1.04) saturate(1.08) brightness(0.9);
+}
+
+.videoFallback {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  color: rgba(240,237,232,0.38);
+  font-family: 'Inter', sans-serif; font-size: 0.88rem;
+}
+
+.cardTopGrad {
+  position: absolute; top: 0; left: 0; right: 0; height: 26%;
+  background: linear-gradient(180deg,rgba(2,3,8,0.5),transparent);
+  z-index: 1; pointer-events: none;
+}
+.cardBottomGrad {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 32%;
+  background: linear-gradient(0deg,rgba(2,3,8,0.65),transparent);
+  z-index: 1; pointer-events: none;
+}
+.cardGlow {
+  position: absolute; inset: 0; z-index: 1;
+  background: radial-gradient(ellipse 80% 60% at 22% 72%,rgba(245,136,74,0.13),transparent 52%);
+  pointer-events: none;
+  animation: glowPulse 4.5s ease-in-out infinite;
+}
+@keyframes glowPulse { 0%,100%{opacity:0.65} 50%{opacity:1} }
+
+.roleBadge {
+  position: absolute; top: 1.1rem; left: 1.1rem; z-index: 4;
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(2,3,8,0.58);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-radius: 999px; padding: 0.5rem 0.88rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.02em;
+  color: rgba(240,237,232,0.9);
+}
+.roleDot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #f5884a; box-shadow: 0 0 10px rgba(245,136,74,0.9);
+  animation: blink 2.2s ease-in-out infinite; flex-shrink: 0;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.controls {
+  position: absolute; right: 1rem; bottom: 1rem; z-index: 4;
+  display: flex; gap: 0.48rem;
+}
+.ctrlBtn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(2,3,8,0.55);
+  color: rgba(240,237,232,0.88);
+  border-radius: 999px; padding: 0.58rem 0.88rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  cursor: pointer; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+  transition: transform 0.22s, background 0.22s, border-color 0.22s;
+}
+.ctrlBtn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.22); }
+
+.cardRingGlow {
+  position: absolute; inset: -18px; border-radius: 52px; z-index: -1;
+  background: radial-gradient(ellipse 100% 58% at 50% 82%,rgba(245,136,74,0.17),transparent 64%);
+  filter: blur(22px); pointer-events: none;
+  animation: ringPulse 5.5s ease-in-out infinite;
+}
+@keyframes ringPulse { 0%,100%{opacity:0.52;transform:scale(1)} 50%{opacity:0.94;transform:scale(1.02)} }
+
+.soundHint {
+  position: absolute; z-index: 6;
+  left: 50%; bottom: 5.2rem; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.08);
+  color: rgba(240,237,232,0.9);
+  border-radius: 999px; padding: 0.7rem 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem; font-weight: 500;
+  cursor: pointer; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  animation: floatHint 2.1s ease-in-out infinite;
+}
+.hintPulse {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #f5884a; box-shadow: 0 0 12px rgba(245,136,74,0.85);
+  animation: blink 1.4s ease-in-out infinite;
+}
+@keyframes floatHint { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-5px)} }
+
+.scrollCue {
+  position: absolute; z-index: 6;
+  left: 50%; bottom: 1.6rem; transform: translateX(-50%);
+  width: 34px; height: 56px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.065);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  cursor: pointer; display: flex; justify-content: center; padding-top: 10px;
+  transition: border-color 0.25s, background 0.25s;
+}
+.scrollCue:hover { border-color: rgba(245,136,74,0.5); background: rgba(245,136,74,0.08); }
+
+.scrollLine {
+  width: 2px; height: 14px; background: #f5884a; border-radius: 999px;
+  animation: scrollPulse 1.8s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+@keyframes scrollPulse { 0%{transform:translateY(-6px);opacity:0.2} 50%{transform:translateY(10px);opacity:1} 100%{transform:translateY(22px);opacity:0} }
+
+.barTop, .barBottom {
+  position: absolute; left: 0; right: 0; z-index: 1; pointer-events: none;
+}
+.barTop    { top:0;    height:clamp(36px,3.8vw,54px); background:linear-gradient(180deg,rgba(0,0,0,0.84),transparent); }
+.barBottom { bottom:0; height:clamp(36px,3.8vw,54px); background:linear-gradient(0deg,rgba(0,0,0,0.84),transparent); }
+
+/* ── Responsive ── */
+@media (max-width: 1060px) {
+  .grid { grid-template-columns:1fr; padding-top:7rem; }
+  .videoCard { aspect-ratio:16/10; max-height:54vh; max-width:640px; border-radius:26px; }
+  .name { font-size:clamp(4.5rem,16vw,9rem); }
+}
+@media (max-width: 640px) {
+  .grid { width:calc(100% - 32px); padding-top:6.5rem; }
+  .name { font-size:clamp(3.8rem,20vw,7rem); }
+  .videoCard { max-height:46vh; border-radius:20px; }
+  .controls { right:0.7rem; bottom:0.7rem; }
+  .roleBadge { top:0.75rem; left:0.75rem; font-size:0.64rem; padding:0.4rem 0.7rem; }
+}

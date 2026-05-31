@@ -1,0 +1,22 @@
+{
+  "name": "sai-teja-cinematic-portfolio-v3",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "npm run build && gh-pages -d out -t"
+  },
+  "dependencies": {
+    "@next/font": "latest",
+    "gsap": "^3.13.0",
+    "next": "15.5.18",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "three": "^0.181.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

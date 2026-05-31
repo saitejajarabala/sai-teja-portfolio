@@ -1,0 +1,15 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  /* slight vignette to pull particles into the frame */
+  mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, black 55%, transparent 100%);
+}
+
+.layer canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
