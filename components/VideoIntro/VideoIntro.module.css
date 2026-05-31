@@ -78,10 +78,10 @@
 ══════════════════════════════════════════════════════════ */
 .name {
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: clamp(4.5rem, 9.5vw, 10.5rem);
-  line-height: 0.92;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(5rem, 11vw, 8rem);
+  line-height: 0.9;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   display: flex;
